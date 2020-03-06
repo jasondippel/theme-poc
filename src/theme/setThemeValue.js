@@ -13,7 +13,7 @@ import { ACTIVE_THEME_JSON } from './config'
  * @param {string} propertyName
  * @param {string} propertyValue
  */
-export const setThemeVal = (rawPropertyName, propertyValue) => {
+export const setThemeValue = (rawPropertyName, propertyValue) => {
   // Update active theme in local storage so that update persists to next session
   const activeThemeJSON = getLocalStorageValue(ACTIVE_THEME_JSON)
   if (!!activeThemeJSON) {

@@ -1,11 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
-import { initializeTheme, useTheme, setThemeVal, setActiveTheme } from './theme'
+import {
+  initializeTheme,
+  useTheme,
+  setThemeValue,
+  setActiveTheme,
+} from './theme'
 
 const NUMBER_OF_ELEMENTS = 10000
 
 window.setActiveTheme = setActiveTheme
-window.setThemeVal = setThemeVal
+window.setThemeValue = setThemeValue
 window.sampleTheme = {
   colors: {
     /**********
