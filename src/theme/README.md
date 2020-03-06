@@ -4,7 +4,7 @@
 
 <!-- A description of what this package does. -->
 
-This package provides you with a higher order component (HOC) that can be used to help enable consistent and easy theming across your project.
+This package provides you with the functions required to initialize, use, and modify a theme.
 
 ## Basic Usage
 
