@@ -1,5 +1,5 @@
 import { generateCustomProperties } from './generateCustomProperties'
-import { setLocalStorageValue } from './utils'
+import { clearProperties, setLocalStorageValue } from './utils'
 import { ACTIVE_THEME_JSON } from './config'
 
 /**
@@ -8,25 +8,12 @@ import { ACTIVE_THEME_JSON } from './config'
  * @param {object} themeObj
  */
 export const setActiveTheme = themeObj => {
-  /**
-   * Theme Object (themeObj)
-   * Expected shape (roughly):
-   * {
-   *   key1: val,
-   *   key2: {
-   *     nestedKey1: val,
-   *     nestedKey2: val,
-   *     nestedKey3: {
-   *       // can keep nesting if it wants...
-   *     },
-   *   },
-   *   // no limit to object size, though large objects are discouraged
-   * }
-   */
+  // clear previous theme
+  clearProperties()
 
-  // TODO: clear previous theme
   // update localstorage
   setLocalStorageValue(ACTIVE_THEME_JSON, JSON.stringify(themeObj))
+
   // set new custom properties
   generateCustomProperties(themeObj)
 }

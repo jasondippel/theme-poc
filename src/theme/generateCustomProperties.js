@@ -5,7 +5,7 @@ import { createProperty } from './utils'
  * @param {object} obj
  * @param {string} prefix
  */
-export const generateCustomProperties = (obj, prefix) =>
+export const generateCustomProperties = (obj, prefix) => {
   Object.keys(obj).forEach(key => {
     const value = obj[key]
     if (typeof value === 'object') {
@@ -17,3 +17,4 @@ export const generateCustomProperties = (obj, prefix) =>
     const propertyValue = obj[key]
     createProperty(propertyName, propertyValue)
   })
+}
