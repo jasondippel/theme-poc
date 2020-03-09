@@ -1,4 +1,4 @@
-# react-hoc-theme
+# theme
 
 ## Description
 
