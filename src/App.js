@@ -128,7 +128,7 @@ const H1 = styled.h1`
 `
 
 const P = styled.p`
-  color: ${useTheme('colors/error')};
+  color: ${useTheme('colors/text')};
 `
 
 export const App = () => {
